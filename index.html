@@ -1,24 +1,994 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Julia Schuler — organizational development, agile leadership, team coaching and change.">
-<title>Julia Schuler — Change, made tangible.</title>
-<style>
-:root{--paper:#f3efe7;--ink:#171916;--muted:#66665f;--line:#c9c5ba;--red:#f04b32;--blue:#243fe3;--lime:#d7f35b;--white:#fffdf8;--max:1240px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:Arial,Helvetica,sans-serif;line-height:1.45}a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 64px));margin:auto}.mono,.eyebrow,.navlinks,.small{font-family:Arial,Helvetica,sans-serif;text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:700}.eyebrow{color:var(--red)}header{border-bottom:1px solid var(--ink);padding:21px 0}.nav{display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-size:1rem;font-weight:900;letter-spacing:-.06em}.navlinks{display:flex;gap:25px}.navlinks a:hover{color:var(--red)}.hero{padding:75px 0 52px;display:grid;grid-template-columns:1.3fr .7fr;gap:36px;align-items:stretch}.hero h1{font-size:clamp(4rem,9.8vw,9.2rem);letter-spacing:-.095em;line-height:.79;font-weight:900;margin:27px 0 34px;max-width:900px}.hero h1 span{display:block}.hero h1 .red{color:var(--red)}.hero-copy{max-width:590px;font-size:1.2rem;line-height:1.45}.hero-side{background:var(--lime);padding:25px;display:flex;flex-direction:column;justify-content:space-between;min-height:370px;transform:rotate(1.2deg)}.hero-side .big-note{font-size:clamp(2rem,4vw,3.5rem);font-weight:850;letter-spacing:-.07em;line-height:.95}.hero-side .index{border-top:1px solid var(--ink);padding-top:14px;display:flex;justify-content:space-between;gap:12px;font-size:.75rem;text-transform:uppercase;font-weight:700;letter-spacing:.06em}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.btn{display:inline-block;border:1px solid var(--ink);padding:13px 17px;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.04em}.btn.primary{background:var(--ink);color:var(--white)}.btn:hover{background:var(--red);color:white;border-color:var(--red)}.ribbon{background:var(--ink);color:var(--paper);padding:16px 0}.ribbon .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em}.ribbon b{color:var(--lime)}section{padding:95px 0;border-bottom:1px solid var(--line)}.section-head{display:grid;grid-template-columns:.45fr 1.55fr;gap:35px;margin-bottom:44px}.section-head h2{font-size:clamp(2.8rem,6vw,6rem);line-height:.88;letter-spacing:-.085em;margin:0;font-weight:900;max-width:900px}.section-head p{max-width:650px;color:var(--muted);font-size:1.04rem;margin:20px 0 0}.about-grid{display:grid;grid-template-columns:1fr .8fr;gap:70px}.about-grid p{font-size:1.1rem;max-width:660px}.pullquote{background:var(--red);color:var(--white);padding:28px;font-size:clamp(1.6rem,3vw,2.7rem);line-height:1;letter-spacing:-.055em;font-weight:850;align-self:start;transform:rotate(-1deg)}.process{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}.process article{padding:22px 20px 25px 0;border-right:1px solid var(--line);margin-right:20px;min-height:260px}.process article:last-child{border:0;margin:0}.number{font-size:3.5rem;line-height:1;font-weight:900;letter-spacing:-.1em;color:var(--red)}.process h3{font-size:1.25rem;line-height:1.05;letter-spacing:-.04em;margin:26px 0 12px}.process p,.case p{font-size:.92rem;color:var(--muted)}.process .deliverable{display:block;margin-top:18px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em}.project-note{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:28px;padding:23px;background:#e6e0d5}.project-note p{margin:0;color:var(--muted);font-size:.91rem}.metrics{display:grid;grid-template-columns:repeat(4,1fr);margin:35px 0 50px;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}.metric{padding:23px 20px 25px 0;border-right:1px solid var(--line);margin-right:20px}.metric:last-child{border:0;margin:0}.metric .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;font-weight:800;color:var(--red)}.metric strong{display:block;font-size:clamp(2.5rem,5vw,4.7rem);line-height:1;letter-spacing:-.09em;margin:13px 0}.metric p{font-size:.83rem;color:var(--muted);margin:0}.case-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}.case{padding:24px 25px 26px;border:1px solid var(--ink);min-height:245px;display:flex;flex-direction:column}.case:nth-child(2){background:var(--lime)}.case:nth-child(3){background:#e3ded4}.case .meta{display:flex;justify-content:space-between;gap:10px;font-size:.68rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.case h3{font-size:clamp(1.6rem,3vw,2.6rem);letter-spacing:-.07em;line-height:.95;margin:36px 0 12px}.case p{max-width:550px;margin:0}.case .tag{margin-top:auto;padding-top:22px;font-size:.7rem;font-weight:800;text-transform:uppercase;letter-spacing:.07em}.next{background:var(--blue);color:white}.next .eyebrow{color:var(--lime)}.next .section-head p{color:#d8dcff}.next-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px}.next-grid p{font-size:1.1rem;max-width:620px}.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:25px}.pill{border:1px solid #aab2ff;padding:8px 12px;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.04em}.more{background:var(--white)}.more-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}.more-grid h3{font-size:2rem;line-height:.95;letter-spacing:-.06em;margin:12px 0}.more-grid p{color:var(--muted);max-width:600px}.contact{background:var(--ink);color:var(--paper);padding:75px 0}.contact .eyebrow{color:var(--lime)}.contact-row{display:flex;justify-content:space-between;align-items:end;gap:30px}.contact h2{font-size:clamp(3rem,7vw,7rem);letter-spacing:-.09em;line-height:.82;margin:20px 0 0}.contact p{max-width:440px;color:#c5c4bc}.contact .btn{background:var(--lime);border-color:var(--lime);color:var(--ink);white-space:nowrap}footer{padding:18px 0;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em}footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-@media(max-width:800px){.wrap{width:calc(100% - 36px)}.navlinks{gap:12px;font-size:.62rem}.navlinks a:nth-child(1),.navlinks a:nth-child(2){display:none}.hero{grid-template-columns:1fr;padding:54px 0 35px}.hero h1{font-size:clamp(4rem,18vw,7rem)}.hero-side{min-height:260px}.section-head,.about-grid,.more-grid,.next-grid,.project-note{grid-template-columns:1fr;gap:20px}.section-head{margin-bottom:30px}.process{grid-template-columns:1fr 1fr}.process article{min-height:230px;border-bottom:1px solid var(--line)}.process article:nth-child(2){border-right:0;margin:0}.process article:nth-child(3){border-bottom:0}.metrics{grid-template-columns:1fr 1fr}.metric:nth-child(2){border-right:0;margin:0}.metric:nth-child(1),.metric:nth-child(2){border-bottom:1px solid var(--line)}.case-list{grid-template-columns:1fr}.contact-row{display:block}.contact .btn{margin-top:24px}.ribbon .wrap{justify-content:flex-start}}
-</style></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Julia Schuler — organizational development, agile leadership, team coaching and change.">
+  <title>Julia Schuler — Change, made tangible.</title>
+  <style>
+    :root {
+      --paper: #f3efe7;
+      --ink: #171916;
+      --muted: #66665f;
+      --line: #c9c5ba;
+      --red: #f04b32;
+      --blue: #243fe3;
+      --lime: #d7f35b;
+      --white: #fffdf8;
+      --max: 1240px;
+      --shadow: 0 24px 60px rgba(18, 17, 17, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    p { margin: 0; }
+
+    .wrap {
+      width: min(var(--max), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(243, 239, 231, 0.9);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(23, 25, 22, 0.08);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 84px;
+      gap: 20px;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+    }
+
+    .navlinks {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .navlinks a:hover { color: var(--ink); }
+
+    main { overflow: clip; }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.3fr 0.85fr;
+      gap: 60px;
+      padding: 72px 0 40px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: clamp(3rem, 5vw, 6rem);
+      line-height: 0.94;
+      letter-spacing: -0.07em;
+      font-weight: 700;
+    }
+
+    h1 .red { color: var(--red); }
+    h1 .blue { color: var(--blue); }
+
+    .hero-copy {
+      font-size: clamp(1.06rem, 1.7vw, 1.55rem);
+      max-width: 620px;
+      color: var(--muted);
+      margin-bottom: 28px;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 22px;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover { transform: translateY(-1px); }
+
+    .btn.primary {
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .btn.secondary {
+      background: transparent;
+      border: 1px solid rgba(23, 25, 22, 0.2);
+      color: var(--ink);
+    }
+
+    .mini-proof {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-size: 0.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .mini-proof strong {
+      color: var(--ink);
+      font-size: 1.2rem;
+      letter-spacing: -0.04em;
+      text-transform: none;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .hero-panel {
+      position: relative;
+      background: var(--white);
+      border: 1px solid rgba(23, 25, 22, 0.08);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+      padding: 20px;
+      min-height: 440px;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 18px auto auto 18px;
+      width: 88px;
+      height: 88px;
+      border-radius: 50%;
+      background: var(--lime);
+      filter: blur(2px);
+      opacity: 0.9;
+    }
+
+    .panel-card {
+      position: relative;
+      background: #f8f4ed;
+      border: 1px solid rgba(23, 25, 22, 0.08);
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 98px;
+      min-height: 280px;
+    }
+
+    .panel-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .panel-dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .panel-dots span {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--line);
+      display: block;
+    }
+
+    .panel-graph {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      align-items: end;
+      margin-top: 24px;
+      height: 150px;
+    }
+
+    .bars {
+      display: flex;
+      align-items: end;
+      gap: 12px;
+      height: 120px;
+      border-bottom: 1px solid rgba(23, 25, 22, 0.18);
+      padding: 0 6px 0 0;
+    }
+
+    .bars span {
+      flex: 1;
+      border-radius: 10px 10px 0 0;
+      background: linear-gradient(180deg, var(--blue), var(--red));
+      opacity: 0.9;
+    }
+
+    .panel-metric {
+      border: 1px solid rgba(23, 25, 22, 0.1);
+      background: rgba(255,255,255,0.5);
+      border-radius: 14px;
+      padding: 12px 14px;
+      align-self: start;
+    }
+
+    .metric-kicker {
+      display: block;
+      color: var(--muted);
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .metric-value {
+      font-size: clamp(1.6rem, 2vw, 2.3rem);
+      line-height: 1;
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      margin-bottom: 4px;
+    }
+
+    .metric-label {
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .ribbon {
+      background: var(--ink);
+      color: var(--white);
+      padding: 18px 0;
+      border-top: 1px solid rgba(255,255,255,0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-top: 8px;
+    }
+
+    .ribbon .wrap {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      font-size: 0.8rem;
+      letter-spacing: 0.02em;
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 180px 1fr;
+      gap: 26px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 4rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      max-width: 820px;
+    }
+
+    .section-head p {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: start;
+    }
+
+    .about-copy {
+      font-size: 1.08rem;
+      color: var(--muted);
+      display: grid;
+      gap: 20px;
+    }
+
+    .about-card {
+      background: var(--white);
+      border: 1px solid rgba(23, 25, 22, 0.08);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .about-card h3 {
+      margin: 0 0 18px;
+      font-size: 1.25rem;
+      letter-spacing: -0.04em;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tags span {
+      display: inline-block;
+      background: rgba(36, 63, 227, 0.08);
+      border: 1px solid rgba(36, 63, 227, 0.15);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 0.73rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .method-card {
+      background: var(--white);
+      border: 1px solid rgba(23, 25, 22, 0.08);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .method-number {
+      width: 46px;
+      height: 46px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--lime);
+      border-radius: 50%;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .method-card h3 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+      letter-spacing: -0.04em;
+    }
+
+    .method-card p {
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .usecases {
+      background: #efe8dc;
+      border-top: 1px solid rgba(23, 25, 22, 0.08);
+      border-bottom: 1px solid rgba(23, 25, 22, 0.08);
+    }
+
+    .usecase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .usecase-card {
+      background: rgba(255,255,255,0.45);
+      border: 1px solid rgba(23, 25, 22, 0.08);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .mockup {
+      background: #f5f1ea;
+      border-bottom: 1px solid rgba(23, 25, 22, 0.08);
+      min-height: 220px;
+      padding: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .board {
+      width: 100%;
+      height: 100%;
+      min-height: 180px;
+      border-radius: 16px;
+      background: linear-gradient(180deg, #f8f4ef, #f1ebdf);
+      border: 1px solid rgba(23,25,22,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .board .dot {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      opacity: 0.8;
+    }
+
+    .board .note {
+      position: absolute;
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink);
+      border: 1px solid rgba(23,25,22,0.08);
+    }
+
+    .board .panel-block {
+      position: absolute;
+      border-radius: 12px;
+      background: rgba(36,63,227,0.08);
+      border: 1px solid rgba(36,63,227,0.20);
+    }
+
+    .board .chart-line {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 24px;
+      height: 80px;
+      border: 2px solid rgba(36,63,227,0.8);
+      border-color: rgba(36,63,227,0.8) transparent transparent transparent;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    }
+
+    .board .circles {
+      position: absolute;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      border: 2px solid rgba(240,75,50,0.8);
+      background: rgba(240,75,50,0.08);
+    }
+
+    .usecase-copy {
+      padding: 22px 22px 24px;
+    }
+
+    .usecase-copy h3 {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+      letter-spacing: -0.04em;
+    }
+
+    .usecase-copy p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .impact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+    }
+
+    .impact-card {
+      background: var(--white);
+      border: 1px solid rgba(23,25,22,0.08);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .impact-card strong {
+      display: block;
+      font-size: clamp(2.3rem, 4vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: -0.08em;
+      margin-bottom: 10px;
+    }
+
+    .impact-card h3 {
+      margin: 0 0 8px;
+      font-size: 1.15rem;
+      letter-spacing: -0.04em;
+    }
+
+    .impact-card p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .next-box {
+      background: var(--ink);
+      color: var(--white);
+      border-radius: 28px;
+      padding: 34px 28px;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .next-box h2 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3vw, 3.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+    }
+
+    .next-box p {
+      color: rgba(255,255,255,0.74);
+      font-size: 1.04rem;
+      max-width: 680px;
+    }
+
+    .next-box .btn.primary {
+      background: var(--white);
+      color: var(--ink);
+      justify-self: end;
+      width: fit-content;
+    }
+
+    .more-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+
+    .more-box {
+      background: var(--white);
+      border: 1px solid rgba(23,25,22,0.08);
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .more-box ul {
+      list-style: none;
+      margin: 18px 0 0;
+      padding: 0;
+      display: grid;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 1rem;
+    }
+
+    .more-box li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+    }
+
+    .bullet {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--red);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+
+    .contact-row {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .contact-box {
+      background: var(--white);
+      border: 1px solid rgba(23,25,22,0.08);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 18px;
+    }
+
+    .contact-box a {
+      font-size: 1.05rem;
+      color: var(--ink);
+      font-weight: 700;
+      display: inline-block;
+    }
+
+    footer {
+      padding: 22px 0 60px;
+      border-top: 1px solid rgba(23,25,22,0.08);
+    }
+
+    .footer-wrap {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .about-grid,
+      .contact-row,
+      .next-box,
+      .more-grid,
+      .section-head {
+        grid-template-columns: 1fr;
+      }
+
+      .method-grid,
+      .impact-grid,
+      .usecase-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav {
+        padding: 14px 0;
+        align-items: flex-start;
+        min-height: auto;
+        flex-direction: column;
+      }
+
+      .navlinks {
+        gap: 12px;
+        font-size: 0.62rem;
+      }
+
+      .hero {
+        padding-top: 52px;
+      }
+
+      .next-box .btn.primary {
+        justify-self: start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { width: min(var(--max), calc(100% - 24px)); }
+      section { padding: 72px 0; }
+      .hero-panel { min-height: 380px; }
+      .cta-row { flex-direction: column; align-items: flex-start; }
+      .btn { width: 100%; }
+      .mini-proof { flex-direction: column; }
+    }
+  </style>
+</head>
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top">JULIA SCHULER<span style="color:var(--red)"> /</span></a><nav class="navlinks"><a href="#about">ABOUT</a><a href="#method">METHOD</a><a href="#impact">IMPACT</a><a href="#more">MORE ABOUT ME</a><a href="#contact">CONTACT ↗</a></nav></div></header>
-<main id="top">
-<div class="wrap hero"><div><div class="eyebrow">Organizational development / Agile leadership / Team coaching</div><h1>Change.<span class="red">Made</span><span>tangible.</span></h1><p class="hero-copy">I help people and organizations navigate change, get clear on what matters and build better ways of working — from everyday team dynamics to organization-wide transformation.</p><div class="actions"><a class="btn primary" href="#impact">See the impact ↓</a><a class="btn" href="#method">How I work ↘</a></div></div><aside class="hero-side"><div class="eyebrow" style="color:var(--ink)">My point of view</div><div class="big-note">Less activity.<br>More progress<br>on the <span style="color:var(--red)">right things.</span></div><div class="index"><span>People · Purpose · Practice</span><span>01—04</span></div></aside></div>
-<div class="ribbon"><div class="wrap"><span><b>4.5 years</b> at roadsurfer</span><span>Teams <b>4 → 10</b></span><span>Change leadership</span><span>Org development</span><span>AI-enabled work</span></div></div>
-<section id="about"><div class="wrap"><div class="section-head"><div class="eyebrow">01 / About</div><div><h2>Build the conditions for better work.</h2><p>I work where people, structures and technology meet. I connect perspectives across silos, make friction visible and help teams turn shared understanding into decisions, ownership and continuous improvement.</p></div></div><div class="about-grid"><div><p>Over the past years at roadsurfer, I have supported teams and leaders through growth, shifting domains and reorganizations. My work has ranged from coaching Product Owners and leadership to building an Agile Coaching team, strengthening collaboration and evolving the way an organization plans, learns and delivers.</p><p>For me, agility is not a ceremony or a framework to roll out. It is an organization's ability to see what is happening, focus on the right problem and adapt without losing direction.</p></div><div class="pullquote">“The goal is not more process. It’s clearer decisions, shared ownership and meaningful outcomes.”</div></div></div></section>
-<section id="method"><div class="wrap"><div class="section-head"><div class="eyebrow">02 / My method</div><div><h2>I treat change as a problem to understand — not a solution to sell.</h2><p>This is also how I approached this portfolio project: start with the purpose, understand the gap, shape a strategy, test the result and improve from evidence. The same logic helps me make organizational change tangible.</p></div></div><div class="process"><article><div class="number">01</div><h3>Understand the starting point</h3><p>What is happening today? Who is affected? What evidence, constraints and needs matter?</p><span class="deliverable">Output / Problem statement</span></article><article><div class="number">02</div><h3>Define the target</h3><p>Make the desired outcome explicit. Connect the change to strategic value, user needs and observable signals of success.</p><span class="deliverable">Output / Target picture + indicators</span></article><article><div class="number">03</div><h3>Map the gap & design the path</h3><p>Identify what stands between today and the target. Prioritize the most relevant changes, stakeholders, communication and experiments.</p><span class="deliverable">Output / Change architecture</span></article><article><div class="number">04</div><h3>Test, learn, adapt</h3><p>Make a first version tangible, validate it with real people, check what works and refine based on feedback and outcomes.</p><span class="deliverable">Output / Feedback + next iteration</span></article></div><div class="project-note"><div><div class="eyebrow">Applied to this website</div><p><strong>Strategic intent:</strong> communicate a clear professional position across organizational development, agile leadership, team coaching and AI transformation — supported by evidence, not buzzwords.</p></div><div><div class="eyebrow">What this demonstrates</div><p>Structured problem framing, audience awareness, prioritization, evidence-based storytelling and iterative delivery. The site is a working draft; the content and metrics still need final validation before publication.</p></div></div></div></section>
-<section id="impact"><div class="wrap"><div class="section-head"><div class="eyebrow">03 / Experience & impact</div><div><h2>Change across teams, structures and ways of working.</h2><p>Across roughly four and a half years at roadsurfer, my work spanned team development, organizational change, leadership support and engineering collaboration. These indicators show parts of the broader journey — not the impact of one initiative alone.</p></div></div><div class="metrics"><div class="metric"><div class="label">Team growth</div><strong>4 → 10</strong><p>Cross-functional teams as the organization scaled.</p></div><div class="metric"><div class="label">Team health</div><strong>+12%</strong><p>Average improvement across three long-standing engineering teams, 2022–2025, as reported.</p></div><div class="metric"><div class="label">Survey participation</div><strong>92%</strong><p>Product & Engineering health survey in 2026: 66 of 72 people.</p></div><div class="metric"><div class="label">Org health</div><strong>85/100</strong><p>Overall score in 2026. Mission: 92 · Teamwork: 89.</p></div></div><div class="case-list"><article class="case"><div class="meta"><span>Organizational development</span><span>01</span></div><h3>From silos to shared ownership</h3><p>Connected Product, Engineering, UX, Data & Analytics and stakeholders to align on goals, clarify needs and make better-informed decisions together.</p><div class="tag">Alignment / Collaboration / Ownership</div></article><article class="case"><div class="meta"><span>Change leadership</span><span>02</span></div><h3>Stability through organizational change</h3><p>Supported teams through three reorganizations, clarified structures and roles, and helped maintain collaboration and workability through uncertainty.</p><div class="tag">Restructuring / Role clarity / Communication</div></article><article class="case"><div class="meta"><span>Team & leadership coaching</span><span>03</span></div><h3>From coaching teams to enabling autonomy</h3><p>Developed coaching practices, supported leaders and Product Owners, and strengthened team-level reflection, health checks and continuous improvement.</p><div class="tag">Team health / Leadership / Learning</div></article><article class="case"><div class="meta"><span>Ways of working</span><span>04</span></div><h3>Improve the system, not just the process</h3><p>Contributed to company-wide OKRs, outcome-oriented reviews and learning formats such as hackathons and Craft Weeks — connecting priorities with practical experimentation.</p><div class="tag">OKRs / Outcomes / Experimentation</div></article></div></div></section>
-<section class="next"><div class="wrap"><div class="section-head"><div class="eyebrow">04 / What’s next</div><div><h2>Transformation in an AI-accelerated world.</h2><p>AI changes how work gets done. It does not remove the need for judgment, shared understanding, quality or good decisions.</p></div></div><div class="next-grid"><div><p>I’m interested in helping organizations evolve their workflows without losing the human capabilities that make change sustainable: clear priorities, critical thinking, collaboration and the confidence to challenge the first answer.</p></div><div><p>That means choosing the right problems, testing new ways of working, paying attention to quality and learning from outcomes — rather than assuming faster output automatically creates value.</p><div class="pills"><span class="pill">AI transformation</span><span class="pill">Change management</span><span class="pill">Organizational development</span><span class="pill">Human-centered ways of working</span></div></div></div></div></section>
-<section class="more" id="more"><div class="wrap"><div class="section-head"><div class="eyebrow">05 / More about me</div><div><h2>Curiosity beyond the job title.</h2><p>A little more about what keeps me curious, grounded and learning.</p></div></div><div class="more-grid"><div><div class="eyebrow">Outside work</div><h3>Yin Yoga teacher.<br>Kite instructor.</h3><p>Two very different practices I enjoy outside work. One asks for patience and attention; the other for reading conditions and adapting in motion. They are personal interests, not a formula for organizational change — but both remind me to stay curious and keep learning.</p></div><div><div class="eyebrow">What I value</div><h3>Good questions.<br>Honest exchange.<br>Useful progress.</h3><p>I like connecting people who would not otherwise compare notes, making complex topics easier to discuss and helping a group find its next practical step. Especially when the path is not completely clear yet.</p></div></div></div></section>
-<section class="contact" id="contact"><div class="wrap contact-row"><div><div class="eyebrow">06 / Contact</div><h2>Let’s make<br>change work.</h2><p>Interested in organizational change, leadership, team collaboration or AI-enabled ways of working? Let’s talk.</p></div><a class="btn" href="mailto:hello@example.com">Get in touch ↗</a></div></section>
-</main><footer><div class="wrap"><span>© Julia Schuler · Portfolio draft</span><span>Strategic thinking. Practical change.</span></div></footer>
-</body></html>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top">Julia Schuler<span style="color:var(--red)"> /</span></a>
+      <nav class="navlinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#method">Method</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#impact">Impact</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Organizational development / Agile leadership / Team coaching</div>
+        <h1>Change.<span class="red">Made</span><span class="blue">tangible.</span></h1>
+        <p class="hero-copy">I help teams and leaders build the conditions for sustainable change — with clarity, practical tools, and human-centered transformation in fast-moving environments.</p>
+        <div class="cta-row">
+          <a class="btn primary" href="#contact">Book a conversation</a>
+          <a class="btn secondary" href="#use-cases">See use cases</a>
+        </div>
+        <div class="mini-proof">
+          <div><strong>4.5 years</strong> at roadsurfer</div>
+          <div><strong>4 → 10</strong> team growth</div>
+          <div><strong>AI-enabled</strong> transformation</div>
+        </div>
+      </div>
+
+      <div class="hero-panel" aria-label="Portfolio preview">
+        <div class="panel-card">
+          <div class="panel-head">
+            <span>Team health</span>
+            <div class="panel-dots"><span></span><span></span><span></span></div>
+          </div>
+          <div class="panel-graph">
+            <div class="bars" aria-hidden="true">
+              <span style="height: 34%"></span>
+              <span style="height: 52%"></span>
+              <span style="height: 68%"></span>
+              <span style="height: 72%"></span>
+              <span style="height: 86%"></span>
+            </div>
+            <div class="panel-metric">
+              <span class="metric-kicker">Momentum</span>
+              <div class="metric-value">+38%</div>
+              <div class="metric-label">team clarity</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ribbon">
+      <div class="wrap">
+        <span><b>4.5 years</b> at roadsurfer</span>
+        <span>Teams <b>4 → 10</b></span>
+        <span>Change leadership</span>
+        <span>Org development</span>
+        <span>AI-enabled work</span>
+      </div>
+    </div>
+
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">01 / About</div>
+          <div>
+            <h2>Build the conditions for better work.</h2>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>I work where people, structures, and technology meet — and where change feels harder than it should. My focus is helping organizations navigate complexity without losing momentum, energy, or trust.</p>
+            <p>Whether in scaling environments, transformations, or AI adoption, I support leaders and teams to make decisions clearly, align around what matters, and turn ideas into sustainable action.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>What I bring</h3>
+            <div class="tags">
+              <span>Change strategy</span>
+              <span>Leadership coaching</span>
+              <span>Facilitation</span>
+              <span>Team development</span>
+              <span>AI adoption</span>
+              <span>Org design</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="method">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">02 / Method</div>
+          <div>
+            <h2>I treat change as a problem to understand — not a solution to sell.</h2>
+          </div>
+        </div>
+
+        <div class="method-grid">
+          <article class="method-card">
+            <div class="method-number">1</div>
+            <h3>Understand</h3>
+            <p>We map the real dynamics, friction points, and opportunities before jumping to solutions.</p>
+          </article>
+
+          <article class="method-card">
+            <div class="method-number">2</div>
+            <h3>Design</h3>
+            <p>I create a practical change path that balances strategy, team realities, and decision-making needs.</p>
+          </article>
+
+          <article class="method-card">
+            <div class="method-number">3</div>
+            <h3>Activate</h3>
+            <p>We move from theory to practice with workshops, rituals, and leadership routines that stick.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="usecases" id="use-cases">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">03 / Use cases</div>
+          <div>
+            <h2>AI can help teams think better — when it is shaped around the real work.</h2>
+          </div>
+        </div>
+
+        <div class="usecase-grid">
+          <article class="usecase-card">
+            <div class="mockup">
+              <div class="board" aria-label="FigJam workshop mockup">
+                <div class="panel-block" style="left:20px; top:22px; width:120px; height:52px;"></div>
+                <div class="panel-block" style="left:150px; top:34px; width:90px; height:82px; background:rgba(240,75,50,0.12); border-color:rgba(240,75,50,0.20);"></div>
+                <div class="panel-block" style="left:30px; top:100px; width:170px; height:42px; background:rgba(36,63,227,0.10); border-color:rgba(36,63,227,0.20);"></div>
+                <div class="note" style="left:34px; top:28px; background:var(--lime);">Goal</div>
+                <div class="note" style="left:170px; top:100px; background:#fff;">Ideas</div>
+                <div class="dot" style="left:120px; top:120px;"></div>
+                <div class="dot" style="left:202px; top:58px; background:var(--blue);"></div>
+              </div>
+            </div>
+            <div class="usecase-copy">
+              <h3>Workshops in FigJam</h3>
+              <p>Facilitating workshops with visual collaboration, structured conversations, and AI-supported synthesis for faster alignment.</p>
+            </div>
+          </article>
+
+          <article class="usecase-card">
+            <div class="mockup">
+              <div class="board" aria-label="Team health dashboard mockup">
+                <div class="panel-block" style="left:18px; top:24px; width:150px; height:30px; background:rgba(36,63,227,0.06);"></div>
+                <div class="panel-block" style="left:18px; top:64px; width:120px; height:82px; background:rgba(36,63,227,0.06);"></div>
+                <div class="panel-block" style="left:150px; top:64px; width:110px; height:110px; background:rgba(240,75,50,0.08);"></div>
+                <div class="chart-line" aria-hidden="true"></div>
+                <div class="dot" style="left:55px; bottom:42px; width:12px; height:12px; background:var(--red);"></div>
+                <div class="dot" style="left:140px; bottom:52px; width:12px; height:12px; background:var(--blue);"></div>
+                <div class="dot" style="left:210px; bottom:46px; width:12px; height:12px; background:var(--red);"></div>
+              </div>
+            </div>
+            <div class="usecase-copy">
+              <h3>Data dashboards for team health</h3>
+              <p>Turning indicators into actionable insight so leaders can identify patterns, risks, and opportunities earlier.</p>
+            </div>
+          </article>
+
+          <article class="usecase-card">
+            <div class="mockup">
+              <div class="board" aria-label="AI-driven workflow mockup">
+                <div class="panel-block" style="left:26px; top:26px; width:120px; height:40px; background:rgba(36,63,227,0.08);"></div>
+                <div class="panel-block" style="left:76px; top:82px; width:110px; height:46px; background:rgba(240,75,50,0.08);"></div>
+                <div class="panel-block" style="left:160px; top:126px; width:110px; height:40px; background:rgba(36,63,227,0.08);"></div>
+                <div class="circles" style="left:44px; top:90px;"></div>
+                <div class="circles" style="left:136px; top:136px;"></div>
+                <div class="circles" style="left:214px; top:82px;"></div>
+                <div class="note" style="left:26px; bottom:24px; background:#fff;">AI workflow</div>
+              </div>
+            </div>
+            <div class="usecase-copy">
+              <h3>AI-driven workflows</h3>
+              <p>Designing practical AI workflows that reduce friction, support better decisions, and create more time for strategic work.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">04 / Impact</div>
+          <div>
+            <h2>Change across teams, structures and ways of working.</h2>
+          </div>
+        </div>
+
+        <div class="impact-grid">
+          <article class="impact-card">
+            <strong>+38%</strong>
+            <h3>Faster alignment</h3>
+            <p>Helping teams clarify direction and reduce ambiguity during periods of change.</p>
+          </article>
+
+          <article class="impact-card">
+            <strong>4 → 10</strong>
+            <h3>Scaling leadership</h3>
+            <p>Supporting teams through growth phases without losing accountability and trust.</p>
+          </article>
+
+          <article class="impact-card">
+            <strong>AI</strong>
+            <h3>Human-centered adoption</h3>
+            <p>Shaping workflows where technology supports work, not pressure, confusion, or overload.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="next-box">
+          <div>
+            <div class="eyebrow" style="color: rgba(255,255,255,0.7); margin-bottom: 12px;">05 / What’s next</div>
+            <h2>Transformation in an AI-accelerated world.</h2>
+            <p>AI changes how work gets done. The question is not whether it will reshape teams, but how we design that change with intention, clarity, and trust.</p>
+          </div>
+          <a class="btn primary" href="#contact">Let’s talk</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="more" id="more">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">06 / More</div>
+          <div>
+            <h2>Curiosity beyond the job title.</h2>
+          </div>
+        </div>
+
+        <div class="more-grid">
+          <div class="more-box">
+            <h3>What drives me</h3>
+            <ul>
+              <li><span class="bullet"></span><span>Making complex change understandable and actionable.</span></li>
+              <li><span class="bullet"></span><span>Helping teams build sustainable ways of working, not just short-term fixes.</span></li>
+              <li><span class="bullet"></span><span>Exploring how AI can support thoughtful, human-centered work.</span></li>
+            </ul>
+          </div>
+
+          <div class="more-box">
+            <h3>Beyond work</h3>
+            <ul>
+              <li><span class="bullet"></span><span>Designing learning experiences and team rituals.</span></li>
+              <li><span class="bullet"></span><span>Exploring ideas at the intersection of leadership, systems, and behavior.</span></li>
+              <li><span class="bullet"></span><span>Turning messy realities into options people can act on.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="wrap contact-row">
+        <div>
+          <div class="eyebrow">07 / Contact</div>
+          <h2 style="margin:0 0 20px; font-size: clamp(2.2rem, 4vw, 4rem); line-height: 0.96; letter-spacing: -0.06em;">Let’s make<br>change work.</h2>
+          <p style="color: var(--muted); font-size:1.08rem; max-width: 560px;">Interested in organizational change, leadership development, or practical AI transformation? I’d love to hear what you’re working on.</p>
+        </div>
+
+        <div class="contact-box">
+          <a href="mailto:hello@julia-schuler.com">hello@julia-schuler.com</a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-wrap">
+      <span>© Julia Schuler · Portfolio draft</span>
+      <span>Strategic thinking. Practical change.</span>
+    </div>
+  </footer>
+</body>
+</html>
