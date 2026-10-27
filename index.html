@@ -220,54 +220,39 @@
         background: var(--line);
       }
 
-      .chart {
+      .metrics-list {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
-        gap: 16px;
-        align-items: end;
+        gap: 18px;
       }
 
-      .bars {
-        display: flex;
-        align-items: end;
-        height: 130px;
-        padding: 0 4px 0 0;
-        border-bottom: 1px solid rgba(23,25,22,0.18);
-        gap: 12px;
-      }
-
-      .bars span {
-        flex: 1;
-        border-radius: 10px 10px 0 0;
-        background: linear-gradient(180deg, var(--blue), var(--red));
-      }
-
-      .metric {
-        background: rgba(255,255,255,0.6);
-        border: 1px solid rgba(23,25,22,0.1);
+      .metric-item {
+        padding: 14px 16px;
         border-radius: 14px;
-        padding: 14px;
+        background: rgba(255,255,255,0.55);
+        border: 1px solid rgba(23,25,22,0.08);
       }
 
-      .metric-label {
+      .metric-kicker {
         display: block;
         color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.12em;
         font-size: 0.68rem;
-        margin-bottom: 8px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        margin-bottom: 6px;
       }
 
-      .metric-value {
-        font-size: clamp(1.8rem, 2vw, 2.5rem);
-        letter-spacing: -0.06em;
-        font-weight: 700;
+      .metric-item strong {
+        display: block;
+        font-size: clamp(1.9rem, 2vw, 2.5rem);
+        letter-spacing: -0.07em;
+        line-height: 1;
         margin-bottom: 4px;
       }
 
-      .metric-note {
+      .metric-item small {
         color: var(--muted);
-        font-size: 0.8rem;
+        font-size: 0.76rem;
+        line-height: 1.5;
       }
 
       .ribbon {
@@ -641,21 +626,24 @@
         <div class="hero-panel" aria-label="Portfolio preview">
           <div class="panel-card">
             <div class="panel-head">
-              <span>Team growth</span>
+              <span>Org health</span>
               <div class="dots"><span></span><span></span><span></span></div>
             </div>
-            <div class="chart">
-              <div class="bars" aria-hidden="true">
-                <span style="height: 36%"></span>
-                <span style="height: 48%"></span>
-                <span style="height: 62%"></span>
-                <span style="height: 76%"></span>
-                <span style="height: 92%"></span>
+            <div class="metrics-list">
+              <div class="metric-item">
+                <span class="metric-kicker">Team health</span>
+                <strong>+12%</strong>
+                <small>Average improvement across three long-standing engineering teams, 2022–2025.</small>
               </div>
-              <div class="metric">
-                <span class="metric-label">Momentum</span>
-                <div class="metric-value">+38%</div>
-                <div class="metric-note">team clarity</div>
+              <div class="metric-item">
+                <span class="metric-kicker">Survey participation</span>
+                <strong>92%</strong>
+                <small>Product &amp; Engineering health survey in 2026: 66 of 72 people.</small>
+              </div>
+              <div class="metric-item">
+                <span class="metric-kicker">Org health</span>
+                <strong>85/100</strong>
+                <small>Overall score in 2026. Mission: 92 · Teamwork: 89.</small>
               </div>
             </div>
           </div>
@@ -790,7 +778,7 @@
                 </div>
               </div>
               <div class="case-copy">
-                <h3>Leadership & change</h3>
+                <h3>Leadership &amp; change</h3>
                 <p>Helping leaders navigate growth, uncertainty, and change with clearer priorities and stronger team alignment.</p>
               </div>
             </article>
@@ -809,21 +797,21 @@
 
           <div class="impact-grid">
             <article class="card impact-card">
-              <strong>1–4</strong>
-              <h3>to 4–10</h3>
-              <p>Helping teams develop the structures, rhythms, and clarity needed for sustainable growth.</p>
+              <strong>+12%</strong>
+              <h3>Team health</h3>
+              <p>Average improvement across three long-standing engineering teams, 2022–2025.</p>
             </article>
 
             <article class="card impact-card">
-              <strong>+38%</strong>
-              <h3>more clarity</h3>
-              <p>Improving alignment and decision-making so teams can move faster with less friction.</p>
+              <strong>92%</strong>
+              <h3>Survey participation</h3>
+              <p>Product &amp; Engineering health survey in 2026: 66 of 72 people.</p>
             </article>
 
             <article class="card impact-card">
-              <strong>AI</strong>
-              <h3>with intent</h3>
-              <p>Shaping practical workflows where technology supports better work rather than adding complexity.</p>
+              <strong>85/100</strong>
+              <h3>Org health</h3>
+              <p>Overall score in 2026. Mission: 92 · Teamwork: 89.</p>
             </article>
           </div>
         </div>
