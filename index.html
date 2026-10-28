@@ -31,6 +31,7 @@
         font-family: Arial, Helvetica, sans-serif;
         line-height: 1.5;
         letter-spacing: -0.02em;
+        overflow-x: hidden;
       }
 
       img { max-width: 100%; display: block; }
@@ -99,7 +100,7 @@
         font-size: 0.68rem;
         letter-spacing: 0.1em;
       }
-      .btn { display:inline-flex; align-items:center; justify-content:center; padding:15px 22px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease; }
+      .btn { display:inline-flex; align-items:center; justify-content:center; padding:15px 22px; border-radius:999px; font-size:0.8rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; transition:transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease; }
       .btn:hover { transform: translateY(-1px); }
       .btn.primary { background: var(--ink); color: var(--white); }
       .btn.secondary { background: transparent; border:1px solid rgba(23,25,22,0.2); color:var(--ink); }
@@ -144,7 +145,7 @@
       .about-card { background:var(--white); border:1px solid rgba(23,25,22,0.08); border-radius:22px; padding:28px; box-shadow:var(--shadow); }
       .about-card h3 { margin:0 0 18px; font-size:1.25rem; letter-spacing:-0.04em; }
       .tags { display:flex; flex-wrap:wrap; gap:10px; }
-      .tags span { display:inline-block; background:rgba(36,63,227,0.08); border:1px solid rgba(36,63,227,0.15); color:var(--ink); border-radius:999px; padding:8px 12px; font-size:0.73rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:700; }
+      .tags span { display:inline-block; background:rgba(36,63,227,0.08); border:1px solid rgba(36,63,227,0.15); color:var(--ink); border-radius:999px; padding:8px 12px; font-size:0.73rem; letter-spacing:0.04em; }
       .method-grid { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:22px; }
       .method-card { background:var(--white); border:1px solid rgba(23,25,22,0.08); border-radius:22px; padding:24px; box-shadow:var(--shadow); }
       .method-number { width:46px; height:46px; display:inline-flex; align-items:center; justify-content:center; background:var(--lime); border-radius:50%; font-weight:700; margin-bottom:18px; }
@@ -158,7 +159,7 @@
       .board .dot { position:absolute; width:10px; height:10px; border-radius:50%; background:var(--red); opacity:0.8; }
       .board .note { position:absolute; border-radius:12px; padding:10px 12px; font-size:0.7rem; letter-spacing:0.04em; font-weight:700; text-transform:uppercase; color:var(--ink); border:1px solid rgba(23,25,22,0.08); }
       .board .panel-block { position:absolute; border-radius:12px; background:rgba(36,63,227,0.08); border:1px solid rgba(36,63,227,0.20); }
-      .board .chart-line { position:absolute; left:18px; right:18px; bottom:24px; height:80px; border:2px solid rgba(36,63,227,0.8); border-color:rgba(36,63,227,0.8) transparent transparent transparent; border-radius:50% 50% 0 0; }
+      .board .chart-line { position:absolute; left:18px; right:18px; bottom:24px; height:80px; border:2px solid rgba(36,63,227,0.8); border-color:rgba(36,63,227,0.8) transparent transparent transparent; border-radius:80% 80% 0 0; }
       .board .circles { position:absolute; width:26px; height:26px; border-radius:50%; border:2px solid rgba(240,75,50,0.8); background:rgba(240,75,50,0.08); }
       .usecase-copy { padding:22px 22px 24px; }
       .usecase-copy h3 { margin:0 0 10px; font-size:1.45rem; letter-spacing:-0.04em; }
@@ -182,22 +183,85 @@
       .contact-box a { font-size:1.05rem; color:var(--ink); font-weight:700; display:inline-block; }
       footer { padding:22px 0 60px; border-top:1px solid rgba(23,25,22,0.08); }
       .footer-wrap { display:flex; justify-content:space-between; flex-wrap:wrap; gap:16px; color:var(--muted); font-size:0.9rem; }
+
       @media (max-width:920px) {
         .hero, .about-grid, .contact-row, .next-box, .more-grid, .section-head { grid-template-columns:1fr; }
         .method-grid, .impact-grid, .usecase-grid { grid-template-columns:1fr; }
-        .nav { grid-template-columns:1fr; justify-items:center; min-height:auto; padding:16px 0; }
+        .nav {
+          grid-template-columns:1fr;
+          justify-items:center;
+          min-height:auto;
+          padding:16px 0;
+        }
         .brand, .header-cta { justify-self:center; }
-        .navlinks { gap:12px 18px; }
+        .navlinks {
+          justify-content:center;
+          gap:10px 18px;
+          width:100%;
+        }
         .hero { padding-top:52px; }
         .next-box .btn.primary { justify-self:start; }
+        .mini-proof { flex-direction:column; gap:10px; }
       }
-      @media (max-width:520px) {
+
+      @media (max-width:640px) {
         .wrap { width:min(var(--max), calc(100% - 24px)); }
+        .brand { font-size:0.72rem; }
+        .navlinks {
+          font-size:0.62rem;
+          letter-spacing:0.08em;
+          gap:8px 12px;
+          line-height:1.5;
+        }
+        .header-cta {
+          width:100%;
+          max-width:220px;
+        }
         section { padding:72px 0; }
-        .hero-panel { min-height:380px; }
-        .cta-row { flex-direction:column; align-items:flex-start; }
-        .btn { width:100%; }
-        .mini-proof { flex-direction:column; }
+        .hero-panel { min-height:340px; }
+        .panel-card { margin-top:72px; min-height:220px; }
+        .panel-graph { grid-template-columns:1fr; height:auto; }
+        .cta-row { flex-direction:column; align-items:stretch; }
+        .btn {
+          width:100%;
+          justify-content: center;
+          font-size:0.7rem;
+          padding:14px 18px;
+        }
+        .mini-proof { font-size:0.72rem; }
+        h1 { font-size: clamp(2.5rem, 16vw, 4rem); }
+        .hero-copy,
+        .section-head p,
+        .about-copy,
+        .usecase-copy p,
+        .impact-card p,
+        .next-box p,
+        .more-box p,
+        .contact-box a,
+        .contact-box p {
+          font-size: 1rem;
+        }
+        .section-head {
+          gap:12px;
+          margin-bottom:30px;
+        }
+        .section-head h2,
+        .next-box h2,
+        .contact h2 {
+          font-size: clamp(1.9rem, 9vw, 2.8rem);
+        }
+        .more-grid,
+        .contact-row {
+          gap:20px;
+        }
+        .next-box {
+          padding:24px 18px;
+          border-radius:20px;
+        }
+        .next-box .btn.primary {
+          width:100%;
+          justify-self:stretch;
+        }
       }
     </style>
   </head>
@@ -223,7 +287,7 @@
         <div>
           <div class="eyebrow">Organizational development / Agile leadership / Team coaching</div>
           <h1>Change.<span class="red">made</span><span class="blue">tangible.</span></h1>
-          <p class="hero-copy">I help people and organizations navigate change, get clear on what matters and build better ways of working — from everyday team dynamics to organization-wide transformation.</p>
+          <p class="hero-copy">I help people and organizations navigate change, get clear on what matters and build better ways of working — from everyday team dynamics to organization-wide transformations.</p>
           <div class="cta-row">
             <a class="btn primary" href="#contact">Contact me</a>
             <a class="btn secondary" href="#use-cases">See use cases</a>
@@ -280,8 +344,8 @@
 
           <div class="about-grid">
             <div class="about-copy">
-              <p>I work where people, structures, and technology meet — and where change feels harder than it should. My focus is helping organizations navigate complexity without losing momentum.</p>
-              <p>Whether in scaling environments, transformations, or AI adoption, I support leaders and teams to make decisions clearly, align around what matters, and turn ideas into sustainable progress.</p>
+              <p>I work where people, structures, and technology meet — and where change feels harder than it should. My focus is helping organizations navigate complexity without losing momentum, purpose, or trust.</p>
+              <p>Whether in scaling environments, transformations, or AI adoption, I support leaders and teams to make decisions clearly, align around what matters, and turn ideas into sustainable ways of working.</p>
             </div>
 
             <div class="about-card">
@@ -477,7 +541,7 @@
           <div class="more-grid" style="margin-top:30px;">
             <div class="more-box">
               <h3>Tools</h3>
-              <p style="color: var(--muted); margin-top:16px; font-size:1rem;">Lattice | Personio | Jira | Confluence | GitHub | Miro | MURAL | Figma | Microsoft Teams | Slack | Claude | Microsoft Copilot</p>
+              <p style="color: var(--muted); margin-top:16px; font-size:1rem;">Lattice | Personio | Jira | Confluence | GitHub | Miro | MURAL | Figma | Microsoft Teams | Slack | Claude | Microsoft Copilot | FigJam</p>
             </div>
 
             <div class="more-box">
