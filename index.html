@@ -271,6 +271,35 @@
         }
       }
 
+      @media (max-width:420px) {
+        .nav {
+          gap: 8px;
+          padding: 10px 0 12px;
+        }
+        .brand {
+          font-size: 0.68rem;
+          letter-spacing: 0.06em;
+        }
+        .navlinks {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 6px 8px;
+        }
+        .navlinks a {
+          flex: 1 1 calc(50% - 8px);
+          text-align: center;
+          padding: 3px 0;
+          min-width: 0;
+        }
+        .header-cta {
+          width: calc(100% - 8px);
+          max-width: none;
+          margin-top: 2px;
+        }
+      }
+
       @supports (-webkit-touch-callout: none) {
         .nav {
           min-height: 72px;
